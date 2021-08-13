@@ -1,3 +1,4 @@
+// written with express.js
 const express = require('express')
 //const bodyParser = require('body-parser')
 const {WebhookClient} = require('dialogflow-fulfillment');
@@ -16,9 +17,9 @@ app.listen(port, () => {
 })
 
 const dialogflowFulfillment = (request, response) =>{
-    //this function takes in request and response
 
     const agent = new WebhookClient({request, response})
+    console.log(agent)
 
     function sayHello(agent){
         agent.add("hi coming from heroku!!!")
