@@ -19,7 +19,7 @@ app.listen(port, () => {
 const dialogflowFulfillment = (request, response) =>{
 
     const agent = new WebhookClient({request, response})
-    console.log(request)
+    console.log(response)
 
     function sayHello(agent){
         agent.add("hi coming from heroku!!!")
